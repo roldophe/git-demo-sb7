@@ -1,6 +1,7 @@
 package com.istad.demogit;
 
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -8,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api/v1/demo")
 public class ControllerDemo {
     @GetMapping
-    public String getFirstDemo(){
-        return "Hello, world";
+    public String getFirstDemo(@RequestBody String keyWord){
+        return keyWord;
     }
 }

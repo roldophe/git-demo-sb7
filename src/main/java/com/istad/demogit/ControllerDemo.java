@@ -1,14 +1,11 @@
 package com.istad.demogit;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/v1/demos")
 public class ControllerDemo {
-    @GetMapping
+    @PostMapping
     public String getFirstDemo(@RequestBody String keyWord){
         return keyWord;
     }
